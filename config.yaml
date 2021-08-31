@@ -38,17 +38,25 @@ menu:
       weight: 1
   after:
     - name: "Github"
+      pre: <i class="fab fa-github"></i>
       url: "https://github.com/hienduyph"
       weight: 10
     - name: "Linkedin"
+      pre: <i class="fab fa-linkedin"></i>
       url: "https://linkedin.com/in/hienduyph"
       weight: 20
     - name: "Facebook"
+      pre: <i class="fab fa-facebook-square"></i>
       url: "https://facebook.com/hienduyph"
       weight: 20
     - name: "Twitter"
+      pre: <i class="fab fa-twitter"></i>
       url: "https://twitter.com/hienduyph"
       weight: 20
+    - name: "Source"
+      pre: <i class="fas fa-code"></i>
+      url: "https://github.com/hienduyph/hienph.dev"
+      weight: 30
 
 params:
   # (Optional, default true) Controls table of contents visibility on right side of pages.

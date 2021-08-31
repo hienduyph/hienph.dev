@@ -178,6 +178,7 @@ Với config như trên thì biết đọc yaml ở folder nào, và thế là m
 - Về roles: Sau khi nghiên cứu thì mình phát hiện Airflow sử dụng flask-appbuilders, dẫn đến chỉ cần viết 1 câu SQL nhỏ nhỏ để insert quyền `read` vào bảng `ab_permission_view_role` với `dag_id` là đủ xài (Hack nhé, cẩn thận sập =]])
 
 # Kết luận
+
 ## **WorkFlow**
 - Update SQL, thêm step
 - `git commit -m "fix things"`
@@ -208,6 +209,18 @@ Thực tế biết về `git` & version control nói là một điểm mạnh r�
 2 ưu điểm lớn của version control:
 - Theo dõi được thay đổi từ lúc một file được sinh ra: ai đổi, đổi vì lý do gì. Nếu có biến gì đều có thể quay về phiên bản ổn định nhất. Và sau đó blame người phát =]].
 - Cho phép nhiều người cùng làm việc chung với nhau trên 1 project, thậm chí là 1 file.
+
+### 2. 500 anh em xài chung 1 con airflow, có bị kẹt phà giờ cao điểm không chú?
+
+Về mặt thiết kế hệ thống, ngay từ đầu mình chọn kubernetes & cài đặt để nó có thể tự động nâng thêm resources && chọn nodes khác nhau khi có nhiều job chạy (autoscaler). Thực tế mình ghi nhận được có lúc đạt **600 jobs** chạy đồng thời.
+
+Thậm chí là chọn được nodes mạnh để run các job tốn nhiều resources:
+- Ví dụ training model thì chạy trên con vài chục CPU.
+- Những job đơn giản như chỉ run SQL thì chạy nodes nhỏ hơn.
+
+Những cái này hoàn toàn tự động & anh em không cần phải làm gì thêm.
+
+(Autoscaling & Distributed đấy =]])
 
 ## Cần cải tiến.
 Những thiết kế này chỉ là bước đầu, còn rất nhiều room để cải thiện thêm, 1 case rất điển hình như: Kéo thả dags nì: Thay vì phải ngồi viết yaml, cực nhọc học git, chỉ việc lên UI kéo thả các thứ & Tạo ngay 1 dags cho mình.
