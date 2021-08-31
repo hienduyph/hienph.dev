@@ -25,7 +25,7 @@ Ngày xửa ngày xưa.
 
 Khi mình vào TIKI vào T9/2018, một lần được cho vào con airflow chính, một cách ngây thơ updates 1 packages.
 
-```yaml
+```bash
 # TLDR:
 # virtualenv python 2 & airflow 1.8
 pip install --upgrade pandas-gbq
