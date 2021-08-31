@@ -3,7 +3,7 @@
 title: "Path to airflow 2"
 date: 2021-08-20T18:09:24+07:00
 publishdate: 2021-08-22
-tags: ['airflow', 'data_infra']
+tags: ['airflow', 'data_infra', 'data_engineering']
 resources:
 - name: features
   src: images/feature-airflow_arch.png
