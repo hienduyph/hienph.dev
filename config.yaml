@@ -17,6 +17,9 @@ markup:
       unsafe: true
   tableOfContents:
     startLevel: 1
+  # your our own highlight
+  highlight:
+    codeFences: false
 
 languages:
   vi:
@@ -97,8 +100,3 @@ params:
   BookPortableLinks: true
 
   Description: Share the ideas and my experiments
-
-markup:
-  # your our own highlight
-  highlight:
-    codeFences: false

@@ -10,12 +10,18 @@ resources:
 ---
 
 *Airflow in the nut shell:*
-
 - Một phiên bảo cron tab (chạy mỗi ngày, mỗi tuần, mỗi giờ mỗi tháng) với UI xịn xò.
 - Các tín đồ data hay sử dụng để viết ETL (Extract Transform Load) job
     - Ví dụ như là select vào rows từ MySQL
     - Thêm ít gia vị (Cooking)
     - Load vào Datawarehouse
+
+**Ké vài miếng quảng cáo**
+- Bạn đang mong muốn tìm kiếm cơ hội mới
+- Bạn muốn làm việc với những công nghệ big data tối tân nhất.
+- Xài serveless tốn kém quá với chậm chạp, bạn có thể tự build & publish cho hơn 500 anh em TIKI xài.
+
+Đến ngay với team data nhé: [JD đây nè](https://tuyendung.tiki.vn/job/senior-data-engineer-data-platform-2082)
 
 # Mới vào nghề
 
@@ -189,3 +195,17 @@ Sau khi lên bridges & chọn đuợc ngày lành tháng tốt. Bắt đầu upg
 - UI mới nhìn đẹp hơn hẵn & thực tế là ai cũng khen (chê xấu là disable account nhé).
 - Việc upgrade lần này êm hơn hẵn so với dự tính của mình là có thể không lên được
     - Vì mình thấy được qua các lần upgrade trước, vỡ rất nhiều chổ
+
+
+# Kết luận
+Còn chờ đợi gì mà không lên airflow 2 ngay và thôi.
+Mình đã upgrade thành công bạn cũng thế. Và nhớ coi ngày trước khi upgrade nha.
+
+
+
+**Ở trên có quảng cáo rồi, nhưng mình vẫn cứ đăng lại**
+- Bạn đang mong muốn tìm kiếm cơ hội mới
+- Bạn muốn làm việc với những công nghệ big data tối tân nhất.
+- Xài serveless tốn kém quá với chậm chạp, bạn có thể tự build & publish cho hơn 500 anh em TIKI xài.
+
+Đến ngay với team data nhé: [JD đây nè](https://tuyendung.tiki.vn/job/senior-data-engineer-data-platform-2082)
