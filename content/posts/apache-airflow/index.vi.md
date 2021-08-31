@@ -65,6 +65,8 @@ Ngồi nghĩ nghĩ, mếu được, thế này sau này kiểu gì cũng sẽ g�
 
 ***Lúc này sau 1 thời gian được rèn luyện ansible và tập làm văn kubernetes manifests bắt đầu có ý tưởng chế 1 yaml để viết config & build nó thành dag.***
 
+[Xem bài viết nà](/posts/airflow-dags-the-right-way/)
+
 *TLDR*:
 
 - Mình viết thêm 1 lớp để set default (giá trị mặc định của các field), tên `Operator` ngắn gọn xúc tích thay vì phải import 1 path dài ngoằn.

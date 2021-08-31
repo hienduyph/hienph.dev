@@ -160,7 +160,7 @@ teams:
     alert:
       kind: telegram
       conn_id: fin_alert
-		conns:
+    conns:
       - conn_id: gcp_team_2
         replace_fields:
           - bigquery_conn_id
