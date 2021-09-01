@@ -1,21 +1,33 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"
-  integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S+Yti0U7QtuZvQ=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/go.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/yaml.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/python.min.js"></script>
+<script type="text/javascript" language="javaScript">
+  function loadScript(src, callback) {
+    let script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    document.body.append(script);
+    script.onload = () => {
+      if (callback) { callback(); }
+    };
+  }
 
-<script>
-  const images = Array.from(document.querySelectorAll("article img"));
-  images.forEach(img => {
-    mediumZoom(img, {
-      margin: 0, /* The space outside the zoomed image */
-      scrollOffset: 40, /* The number of pixels to scroll to close the zoom */
-      container: null, /* The viewport to render the zoom in */
-      template: null /* The template element to display on zoom */
+  function attachZoomImg() {
+    const images = Array.from(document.querySelectorAll("article img"));
+    images.forEach(img => {
+      mediumZoom(img, {
+        margin: 0, /* The space outside the zoomed image */
+        scrollOffset: 40, /* The number of pixels to scroll to close the zoom */
+        container: null, /* The viewport to render the zoom in */
+        template: null /* The template element to display on zoom */
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js', attachZoomImg);
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js', function() {
+      feather.replace();
     });
   });
 </script>
 
-<script>hljs.highlightAll();</script>
+<script defer src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js')></script>
+<script defer src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js')></script>

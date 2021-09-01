@@ -37,24 +37,24 @@ menu:
       url: "https://my.hienph.dev"
       weight: 1
   after:
-    - name: "Github"
-      pre: <i class="fab fa-github"></i>
+    - name: Github
+      pre: <i data-feather="github" class="feather-menu" width=18 height=18></i>
       url: "https://github.com/hienduyph"
       weight: 10
     - name: "Linkedin"
-      pre: <i class="fab fa-linkedin"></i>
+      pre: <i data-feather="linkedin" class="feather-menu" width=18 height=18></i>
       url: "https://linkedin.com/in/hienduyph"
       weight: 20
     - name: "Facebook"
-      pre: <i class="fab fa-facebook-square"></i>
+      pre: <i data-feather="facebook" class="feather-menu" width=18 height=18></i>
       url: "https://facebook.com/hienduyph"
       weight: 20
     - name: "Twitter"
-      pre: <i class="fab fa-twitter"></i>
+      pre: <i data-feather="twitter" class="feather-menu" width=18 height=18></i>
       url: "https://twitter.com/hienduyph"
       weight: 20
     - name: "Source"
-      pre: <i class="fas fa-code"></i>
+      pre: <i data-feather="code" class="feather-menu" width=18 height=18></i>
       url: "https://github.com/hienduyph/hienph.dev"
       weight: 30
 
@@ -93,7 +93,7 @@ params:
   # (Optional, default true) Enables search function with flexsearch,
   # Index is built on fly, therefore it might slowdown your website.
   # Configuration for indexing can be adjusted in i18n folder per language.
-  BookSearch: true
+  BookSearch: false
 
   # (Optional, default true) Enables comments template on pages
   # By default partals/docs/comments.html includes Disqus template

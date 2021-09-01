@@ -115,7 +115,7 @@ with DAG(
         druid_conn_id='k8s_druid',
         date_column='date',
     )
-		t1 >> t2
+    t1 >> t2
 ```
 
 Chỉ cần viết 1 file yaml.

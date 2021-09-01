@@ -1,4 +1,10 @@
-.markdown pre {
-  // match with theme in highlight js
-  background-color: #0d1117 !important;
+.markdown pre,
+.markdown code
+{
+  font-size: .9em !important;
+}
+.feather-menu {
+  position: relative;
+  top: 0.15em;
+  vertical-align: bottom;
 }
