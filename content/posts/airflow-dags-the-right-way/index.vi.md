@@ -170,7 +170,7 @@ teams:
           - google_cloud_conn_id
 ```
 
-Với config như trên thì biết đọc yaml ở folder nào, và thế là mình đã nghĩ ra cách đơn giả là phải **bắt buộc các file yaml phải được đặt vào thư mục với `name` tương ứng**. Ví dụ (`dags/finances`)
+Với config như trên thì biết đọc yaml ở folder nào, và thế là mình đã nghĩ ra cách đơn giản là phải **bắt buộc các file yaml phải được đặt vào thư mục với `name` tương ứng**. Ví dụ (`dags/finances`)
 
 Đến đây chỉ việc viết 1 script python sương sương duyệt folder, parse yaml và:
 - Gắn `failed_callback` tương với alert connection_id.
