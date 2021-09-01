@@ -23,7 +23,7 @@ Mình tin rằng nhất định có một cách viết dags khác:
 - Bạn muốn làm việc với những công nghệ big data tối tân nhất.
 - Xài serveless tốn kém quá với chậm chạp, bạn có thể tự build & publish cho hơn 500 anh em TIKI xài.
 
-Đến ngay với team data nhé: [JD đây nè](https://tuyendung.tiki.vn/job/senior-data-engineer-data-platform-2082)
+Đến ngay với team data nhé: [JD đây nè](https://tuyendung.tiki.vn/job/senior-data-engineer-data-platform-2082) (Hoặc gửi CV vào mail mình hien.pham2@tiki.vn)
 
 # Bối cảnh
 Bài viết này là cách mình thiết kế & tổ chức config cho airflow (trước thềm đú trend lên cloud).
@@ -235,4 +235,4 @@ Những thiết kế này mình đã hoàn thành vào 2019, nhưng mà idea c�
 - Bạn muốn làm việc với những công nghệ big data tối tân nhất.
 - Xài serveless tốn kém quá với chậm chạp, bạn có thể tự build & publish cho hơn 500 anh em TIKI xài.
 
-Đến ngay với team data nhé: [JD đây nè](https://tuyendung.tiki.vn/job/senior-data-engineer-data-platform-2082)
+Đến ngay với team data nhé: [JD đây nè](https://tuyendung.tiki.vn/job/senior-data-engineer-data-platform-2082) (Hoặc gửi CV vào mail mình hien.pham2@tiki.vn)
