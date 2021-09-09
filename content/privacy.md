@@ -2,7 +2,6 @@
 title: "Privacy Policy"
 date: 2021-09-09T08:24:46+07:00
 type: static
-draft: true
 ---
 <h1>Privacy Policy</h1>
 <p>Last updated: September 09, 2021</p>
