@@ -2,7 +2,7 @@
 title: "Airflow Dags The Right Way"
 date: 2021-08-31T15:09:24+07:00
 publishdate: 2021-08-31
-tags: ['airflow', 'data_engineering']
+tags: ['airflow', 'data_engineering', 'big-data']
 resources:
 - name: features
   src: images/dags-config.png
@@ -18,12 +18,7 @@ Mình tin rằng nhất định có một cách viết dags khác:
 - Dễ dàng cho việc monitor, alerting khi có biến xảy ra
 - Upgrade core của airflow không cần phải thay đổi các dags config hiện tại.
 
-**Ké vài miếng quảng cáo**
-- Bạn đang mong muốn tìm kiếm cơ hội mới
-- Bạn muốn làm việc với những công nghệ big data tối tân nhất.
-- Xài serveless tốn kém quá với chậm chạp, bạn có thể tự build & publish cho hơn 500 anh em TIKI xài.
-
-Đến ngay với team data nhé: [JD đây nè](https://tuyendung.tiki.vn/job/senior-data-engineer-data-platform-2082) (Hoặc gửi CV vào mail mình hien.pham2@tiki.vn)
+{{< hiring >}}
 
 # Bối cảnh
 Bài viết này là cách mình thiết kế & tổ chức config cho airflow (trước thềm đú trend lên cloud).
@@ -230,9 +225,4 @@ Những thiết kế này mình đã hoàn thành vào 2019, nhưng mà idea c�
 - [Data Engineers Shouldn't Write Airflow Dags](https://towardsdatascience.com/data-engineers-shouldnt-write-airflow-dags-b885d57737ce)
 - [Data Engineers Shouldn't Write Airflow Dags - Part 2](https://towardsdatascience.com/data-engineers-shouldnt-write-airflow-dags-part-2-8dee642493fb)
 
-**1 phút quảng cáo**
-- Bạn đang mong muốn tìm kiếm cơ hội mới
-- Bạn muốn làm việc với những công nghệ big data tối tân nhất.
-- Xài serveless tốn kém quá với chậm chạp, bạn có thể tự build & publish cho hơn 500 anh em TIKI xài.
-
-Đến ngay với team data nhé: [JD đây nè](https://tuyendung.tiki.vn/job/senior-data-engineer-data-platform-2082) (Hoặc gửi CV vào mail mình hien.pham2@tiki.vn)
+{{< hiring >}}

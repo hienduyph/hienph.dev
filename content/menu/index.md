@@ -2,6 +2,6 @@
 headless: true
 ---
 
-- [**BigData**]({{< relref "/journey/bigdata" >}})
+- [**BigData**]({{< relref "/tags/big-data" >}})
 <br />
 <br />

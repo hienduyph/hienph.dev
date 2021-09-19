@@ -3,7 +3,7 @@
 title: "Path to airflow 2"
 date: 2021-08-20T18:09:24+07:00
 publishdate: 2021-08-22
-tags: ['airflow', 'data_infra', 'data_engineering']
+tags: ['airflow', 'data_infra', 'data_engineering', 'big-data']
 resources:
 - name: features
   src: images/feature-airflow_arch.png
@@ -16,12 +16,7 @@ resources:
     - Thêm ít gia vị (Cooking)
     - Load vào Datawarehouse
 
-**Ké vài miếng quảng cáo**
-- Bạn đang mong muốn tìm kiếm cơ hội mới
-- Bạn muốn làm việc với những công nghệ big data tối tân nhất.
-- Xài serveless tốn kém quá với chậm chạp, bạn có thể tự build & publish cho hơn 500 anh em TIKI xài.
-
-Đến ngay với team data nhé: [JD đây nè](https://tuyendung.tiki.vn/job/senior-data-engineer-data-platform-2082)
+{{< hiring >}}
 
 # Mới vào nghề
 
@@ -201,11 +196,4 @@ Sau khi lên bridges & chọn đuợc ngày lành tháng tốt. Bắt đầu upg
 Còn chờ đợi gì mà không lên airflow 2 ngay và thôi.
 Mình đã upgrade thành công bạn cũng thế. Và nhớ coi ngày trước khi upgrade nha.
 
-
-
-**Ở trên có quảng cáo rồi, nhưng mình vẫn cứ đăng lại**
-- Bạn đang mong muốn tìm kiếm cơ hội mới
-- Bạn muốn làm việc với những công nghệ big data tối tân nhất.
-- Xài serveless tốn kém quá với chậm chạp, bạn có thể tự build & publish cho hơn 500 anh em TIKI xài.
-
-Đến ngay với team data nhé: [JD đây nè](https://tuyendung.tiki.vn/job/senior-data-engineer-data-platform-2082)
+{{< hiring >}}
