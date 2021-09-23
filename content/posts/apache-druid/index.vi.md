@@ -5,7 +5,7 @@ url: tiki-scales-data-platform-visualization-voi-apache-druid-nhu-the-nao
 tags: ["apache-druid", "big-data", "data_engineering", "olap", "datamart", "data-warehouse", "data-visualization"]
 resources:
 - name: features
-  src: images/druid-architect.webp
+  src: images/druid-architect.png
 ---
 # Introduction
 
