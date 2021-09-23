@@ -9,6 +9,16 @@
     };
   }
 
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    loadScript('https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js', function() {
+      feather.replace();
+    });
+  });
+</script>
+
+{{ if ne .Type "static" }}
+<script type="text/javascript" language="javaScript">
   function attachZoomImg() {
     const images = Array.from(document.querySelectorAll("article img"));
     images.forEach(img => {
@@ -19,15 +29,12 @@
         template: null /* The template element to display on zoom */
       });
     });
-  }
-
+  };
   document.addEventListener('DOMContentLoaded', (event) => {
     loadScript('https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js', attachZoomImg);
-    loadScript('https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js', function() {
-      feather.replace();
-    });
   });
 </script>
+{{ end }}
 
 <script defer src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.24.1/components/prism-core.min.js'></script>
 <script defer src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js'></script>

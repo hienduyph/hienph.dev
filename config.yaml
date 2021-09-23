@@ -36,6 +36,9 @@ menu:
     - name: "My Profile"
       url: "https://my.hienph.dev"
       weight: 1
+    - name: "About Me"
+      url: "/about"
+      weight: 1
   after:
     - name: Github
       pre: <i data-feather="github" class="feather-menu" width=18 height=18></i>
