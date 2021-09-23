@@ -33,11 +33,8 @@ languages:
 
 menu:
   before:
-    - name: "My Profile"
+    - name: "My Portfolio"
       url: "https://my.hienph.dev"
-      weight: 1
-    - name: "About Me"
-      url: "/about"
       weight: 1
   after:
     - name: Github
