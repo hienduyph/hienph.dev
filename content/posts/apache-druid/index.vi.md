@@ -21,14 +21,14 @@ Lúc mà hiệu suất của anh em chậm lại đáng kể bởi:
 
 Về mặt dữ liệu còn gặp phải vấn đề:
 
-- Cập nhật theo ngày, hoặc một số nhỏ hơn thì theo giờ: Việc không hổ trợ dữ liệu real-time sẽ ảnh hưởng nhiều đến vận hành, phân bổ về inventory hay là boosting các sản phẩm HOT vào những đợt sales lớn (ví dụ như 9.9, 10.10 ...).
+- Cập nhật theo ngày, hoặc một số nhỏ hơn thì theo giờ: Việc không hỗ trợ dữ liệu real-time sẽ ảnh hưởng nhiều đến vận hành, phân bổ về inventory hay là boosting các sản phẩm HOT vào những đợt sales lớn (ví dụ như 9.9, 10.10 ...).
 
 Những lý do trên thôi thúc anh em Team Data bắt đầu suy nghĩ tìm cách để tối ưu hóa hiệu suất cũng nhưng nâng cao hiệu quả sử dụng dữ liệu ở TIKI, với yêu cầu đặt ra về hệ thống này:
 
 - Anh chị em Business (như team Marketing, ngành hàng, marketplace ...) có thể phân tích một cách nhanh chóng, hiệu quả & đưa ra các quyết định đúng đắn. Đồng thời có thể tự tạo các dashboard chỉ bằng kéo thả, không cần phải mở tickets & đợi anh em data gửi data.
 - Các bạn analytics (DA), BI có thể tự viết cho mình một data pipeline, đưa lên hệ thống visualization một cách đơn giản nhất.
 - Anh em data platform tâp trung vào build hạ tầng (Data Infrastructures) & các công cụ (tools) để tổng hợp, tổ chức & xử lý data một cách nhanh chóng hiệu quả, đơn giản nhất có thể. Với nền tảng đó, các teams & phòng ban khác ở TIKI thực hiện những phân tích cần thiết & đưa ra những quyết định đúng đắn mà không phải tốn quá nhiều công sức hay phải dành nhiều thời gian để tìm hiểu quá sâu về mặt kỹ thuật (technicals).
-- Dữ liêu phải được cập nhật real-time: ví dụ như khách hàng đặt đơn hàng thành công, thì đơn hàng đó ngay lập tức phải xuất hiện ngay lập tức hệ thống.
+- Dữ liêu phải được cập nhật in real-time: ví dụ như khách hàng đặt đơn hàng thành công, thì đơn hàng đó ngay lập tức phải xuất hiện trong hệ thống.
 - Đáp ứng những yêu cầu về mặt hạ tầng (scalable, stable): hệ thống vẫn phải ổn định & nhanh với lượng dữ liệu to dần (từ vài trăm GB lên cỡ TB) hay thậm chí có thể lên Petabytes trong tương lai.
 - Có thể mở ra một hướng mới để lấy dữ liệu cho các service khác ở TIKI
 
@@ -52,14 +52,14 @@ Trước tiên cần phải viết chi tiết hơn về mặt technical, hệ th
 - Tích hợp được với hệ thống data warehouse hiện tại.
     - TIKI chọn BigQuery cho Data-Warehouse platform, vì vậy bắt buộc phải đồng bộ (sync) dữ liệu từ BigQuery
 - Có thể backfill historical: ví dụ khi thêm column mới có thể run lại data quá khứ mà không tốn quá nhiều công sức.
-- Hổ trợ data real-time, đặc biệt là từ Apache Kafka.
+- hỗ trợ data real-time, đặc biệt là từ Apache Kafka.
 - Scalable: Dữ liệu growth từ GB lên TB hoặc vài chục TB vẫn phải đáp ứng được.
 - Tiết kiệm: (+ auto scaling) có thể thêm servers khi cần thiết & giảm xuống khi thấp điểm.
 - Không phải tốn quá nhiều nhân lực để quản lý & vận hành.
 
 Sau thời gian tìm hiểu, cài đặt & thử nghiệm các công nghệ database khác nhau, từ Apache Druid, Apache Pinot, ClickHouse. Một vấn đề phải đối mặt đó là những bài so sánh về ưu nhược điểm của các database trên là khá ít. Và team cũng xác định chiến lược lúc này vẫn là thử sai và thay đổi càng nhanh càng tốt để tìm ra được công nghệ phù hợp với yêu cầu của team.
 
-Sau một thời gian thử nghiệm, team đã quyết định chọn Apache Druid là thử nghiệm đầu tiên cho hệ thống của mình.
+Sau một thời gian thử nghiệm, team đã quyết định chọn Apache Druid là database chính cho hệ thống OLAP.
 
 ## Apache Druid's coming
 
@@ -99,11 +99,11 @@ Khi có toàn bộ dữ liệu về sales, users behaviors thì việc tìm insi
 
 ## Đồng bộ dữ liệu từ BigQuery
 
-Druid được thiết kế để có thể tận dụng được hệ thống data platform (cả data warehouse) sẵn có, ví như như Hadoop, Hive, Spark, vì vậy rất nhiều cách đồng bộ dữ liệu (mình sẽ gọi là index) được hổ trợ. Tuy nhiên lại không có BigQuery trong danh sách.
+Druid được thiết kế để có thể tận dụng được hệ thống data platform (cả data warehouse) sẵn có, ví như như Hadoop, Hive, Spark, vì vậy rất nhiều cách đồng bộ dữ liệu (mình sẽ gọi là index) được hỗ trợ. Tuy nhiên lại không có BigQuery trong danh sách.
 
-Tuy không hổ trợc trực tiếp BigQuery, nhưng Druid có hổ trợ đọc file từ Google Cloud Storage - GCS qua `native batch indexer`.  Và mảnh ghép còn lại chính là từ BigQuery qua GCS (đã được BigQuery hổ trợ sẵn). 
+Tuy không hỗ trợ trực tiếp indexer từ BigQuery, nhưng Druid có hỗ trợ đọc file từ Google Cloud Storage - GCS qua `native batch indexer`.  Và mảnh ghép còn lại chính là từ BigQuery qua GCS (đã được BigQuery hỗ trợ sẵn). 
 
-Điều kiện cần đã xong, tiếp theo mà make it done. Nhiệm vụ chính bây giờ là viết một Airflow Operator (Có thể tham khảm cách team sử dụng Airflow ở đây nè: [https://www.hienph.dev/posts/airflow-dags-the-right-way/](https://www.hienph.dev/posts/airflow-dags-the-right-way/))
+Điều kiện cần đã xong, tiếp theo là make it done. Nhiệm vụ chính bây giờ là viết một Airflow Operator (Có thể tham khảm cách team sử dụng Airflow ở đây nè: [https://www.hienph.dev/posts/airflow-dags-the-right-way/](https://www.hienph.dev/posts/airflow-dags-the-right-way/))
 
 Để đảm bảo tiêu chí dễ sử dụng & hiệu quả khi đồng bộ, thì càng ít fields bắt buộc càng tốt và operator phải làm tốt nhất có thể để quá trình index càng nhanh càng tốt.
 
@@ -117,11 +117,11 @@ druid_destination_table: girls_available
 
 ## Data Modeling cho realtime & batch processing
 
-Druid tổ chức dữ liệu thành các segment, được chia theo time (có thể theo giờ hoặc ngày). Và Druid hổ trợ sẵn tính năng override dữ liệu theo **time**. Tại sao điều này lại liên quan tới cách tổ chức dữ liệu.
+Druid tổ chức dữ liệu thành các segment, được chia theo time (có thể theo giờ hoặc ngày). Và Druid hỗ trợ sẵn tính năng override dữ liệu theo **time**. Tại sao điều này lại liên quan tới cách tổ chức dữ liệu.
 
 Hình dung bạn có 1 data pipeline batch processing tính toán các report về Sales cực kỳ phức tạp, phải join hàng chục bảng với nhau, vài nghìn dòng SQL transform tất cả & rất khó để tính toán chính xác real-time được.
 
-Vì vậy lúc thiết kế real-time processing, bạn chọn toán cách gần đúng (90 - 95%) bù lại độ phức tạp về giảm logic giảm 50%. Để launch data source mới này, bạn chọn cách tạo ra 2 bảng riêng cho realtime & batch, với 1 notes: *dữ liệu bảng realtime chỉ xài được trong ngày thôi.* Và sau đó cứ vài ngày lại có ticket về mis match data do nhầm lẫn realtime & batch. Can we do this better?
+Vì vậy lúc thiết kế real-time processing, bạn chọn cách tính toán gần đúng (90 - 95%) bù lại độ phức tạp về giảm logic giảm 50%. Để launch data source mới này, bạn chọn cách tạo ra 2 bảng riêng cho realtime & batch, với 1 note: *dữ liệu bảng realtime chỉ xài được trong ngày thôi.* Và sau đó cứ vài ngày lại có ticket về mis match data do nhầm lẫn realtime & batch. Can we do this better?
 
 ***Hello Lambda architecture***
 
@@ -140,9 +140,9 @@ Từ bây giờ, users chỉ biết đến 1 source duy nhất, không cần ph�
 
 Khi đã xác định chiến lược chính khi nghiên cứu Druid là thử sai càng nhanh càng tốt.
 
-Bắt đầu khiêm tốt chỉ với 3 em VM (8cores mỗi em thôi), và kiến trúc microservice của Druid bắt buộc phải có: ZooKeeper,  Coordinator, Overlord, Historical, Broker, Middlemanager. Cài đặt tay chân là điều không thể, nhất là khi mà số lượng nodes lên hàng chục thậm chí là hàng trăm. Thế là được gặp thêm anh bạn Ansible.
+Bắt đầu khiêm tốn chỉ với 3 em VM (8cores mỗi em thôi), và kiến trúc microservice của Druid bắt buộc phải có: ZooKeeper,  Coordinator, Overlord, Historical, Broker, Middlemanager. Cài đặt tay chân là điều không thể, nhất là khi mà số lượng nodes lên hàng chục thậm chí là hàng trăm. Thế là được gặp thêm anh bạn Ansible.
 
-*Phiên bản production được hòa thiện và giới thiệu đến anh em business vào khoảng tháng 03/2019, chủ yếu phục các report về sales, thời điểm này chưa tới 50GB, anh em business kéo phát nào là ra số được phát đó. Êm lắm anh em <3.*
+*Phiên bản production được hoàn thiện và giới thiệu đến anh em business vào khoảng tháng 03/2019, chủ yếu phục các report về sales, thời điểm này chưa tới 50GB, anh em business kéo phát nào là ra số được phát đó. Êm lắm anh em <3.*
 
 ### Thử thách về scale
 
