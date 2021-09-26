@@ -1,0 +1,6 @@
+<h2>Latest Snippets</h2>
+{{ range first 5 ( where .Site.RegularPages "Type" "snippets" )}}
+{{ if eq .Type "snippets" }}
+<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}
+{{ end }}

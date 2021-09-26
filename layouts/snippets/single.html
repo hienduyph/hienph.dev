@@ -1,0 +1,33 @@
+{{ define "main" }}
+<section id="main">
+  <h1>
+    <a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a>
+  </h1>
+  {{ partial "docs/post-meta" . }}
+  <div>
+    <article id="content">
+       {{ .Content }}
+    </article>
+  </div>
+</section>
+<aside id="meta">
+    <div>
+    {{ with .Params.topics }}
+    <ul id="topics">
+      {{ range . }}
+        <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+    </div>
+    <div>
+      {{ with .PrevInSection }}
+        <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+      {{ end }}
+      {{ with .NextInSection }}
+        <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+      {{ end }}
+    </div>
+</aside>
+{{ end }}
+
