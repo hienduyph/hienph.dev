@@ -108,3 +108,7 @@ params:
   BookPortableLinks: true
 
   Description: Share the ideas and my experiments
+
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
