@@ -1,6 +1,7 @@
 # [Hien's Notes](https://www.hienph.dev)
 
 My Notes in the tech journey.
+
 Live at: https://www.hienph.dev
 
 ## Built with
